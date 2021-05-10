@@ -20,8 +20,7 @@ public class TestObjetGeometrique {
                        + i +
                        " est de "
                        + tableauObjetgemetrique[i].perimetre()
-                       + " et sa surface est de "
-                       + tableauObjetgemetrique[i].surface());
+                       + " et sa surface est de " + tableauObjetgemetrique[i].surface());
            }
 
         }
