@@ -11,7 +11,29 @@ public class Expression {
         this.operateur = operateur;
     }
 
-    public double evaluer(char a, double valeur){
+    public double evaluer(String param, double valeur){
+
+        double un = 0.0;
+        double deux = 0.0;
+        if(operandGauche.equals(param)){
+            un = valeur;
+            deux = Double.parseDouble(operandeDroite);
+        }else{
+            deux = valeur;
+            un = Double.parseDouble(operandGauche);
+
+        }
+      switch (operateur){
+          case "+":
+
+              return un + deux;
+          case "-":
+              return un - deux;
+          case "/":
+              return un / deux;
+          case "*":
+              return un  * deux;
+      }
         return 0.0;
     }
 

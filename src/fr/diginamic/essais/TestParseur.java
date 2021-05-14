@@ -5,10 +5,10 @@ import fr.diginamic.parseur.Parseur;
 
 public class TestParseur {
     public static void main(String[] args) {
-        String chaine = "y+2";
+        String chaine = "3*x";
         Expression expr = Parseur.parse(chaine);
         System.out.println("expr" +expr);
-        double resultat = expr.evaluer('x',2.5);
+        double resultat = expr.evaluer("x",9.0);
         System.out.println(resultat);
 
 
