@@ -7,8 +7,6 @@ public class RecherchePopulationDepartement {
         System.out.println("veuillez saisir le departement :");
         String departement = scanner.nextLine();
         System.out.println(recensement.populationDepartement(departement));
-
-
     }
 
 }

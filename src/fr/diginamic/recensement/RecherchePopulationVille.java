@@ -7,8 +7,6 @@ public class RecherchePopulationVille extends MenuService{
         System.out.println("veuillez saisir la ville :");
         String ville = scanner.nextLine();
         System.out.println(recensement.populationVille(ville));
-
-
     }
 
 }

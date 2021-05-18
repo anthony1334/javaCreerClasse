@@ -10,10 +10,7 @@ import java.util.List;
 
 public class Recensement {
 
-   ArrayList<Ville> arrayVille = new ArrayList<>();
-
-
-
+    ArrayList<Ville> arrayVille = new ArrayList<>();
     Path path = Paths.get("./recensement.csv");
     List<String> lines =null;
 
@@ -24,24 +21,20 @@ public class Recensement {
 
             for (String line : lines) {
                 arrayVille.add(new Ville().setData(line));
-
             }
-
-
-
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-public int populationVille(String ville){
-    for (Ville ville1 : arrayVille) {
-        if(ville.equals(ville1.nomCommune)){
-        return ville1.populationTotale;
+    public int populationVille(String ville){
+        for (Ville ville1 : arrayVille) {
+            if(ville.equals(ville1.nomCommune)){
+            return ville1.populationTotale;
+            }
         }
+        return 0;
     }
-return 0;
-}
 
     /**
      * recupere la population pour un  departement donné en paramètre
@@ -51,9 +44,9 @@ return 0;
     public int populationDepartement(String departement){
         int total = 0;
         for (Ville ville1 : arrayVille) {
-        if(departement.equals(ville1.codeDepartement)){
-             total += ville1.populationTotale;
-        }
+            if(departement.equals(ville1.codeDepartement)){
+                 total += ville1.populationTotale;
+            }
 
         }
         return total;
@@ -89,14 +82,13 @@ return 0;
             System.out.println("top10 des Ville pour la région region:"+region + "sont: " + ville.nomCommune);
         }
         return top10;
-
     }
 
     //Recupere les 10 villes les plus peuplées de France
     public ArrayList<Ville> populationParVilleDeFrance(){
         ArrayList<Ville>arrayList = new ArrayList<>();
         for (Ville ville1 : arrayVille) {
-                arrayList.add(ville1)  ;
+            arrayList.add(ville1) ;
         }
         Collections.sort(arrayList, new CompratorVille());
         ArrayList<Ville> top10 = new ArrayList<>(arrayList.subList(0,10));
@@ -119,7 +111,6 @@ return 0;
             if(region == ville1.codeRegion){
                 total += ville1.populationTotale;
             }
-
         }
         return total;
     }

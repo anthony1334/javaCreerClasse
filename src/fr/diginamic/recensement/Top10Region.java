@@ -6,12 +6,12 @@ import java.util.*;
 
 public class Top10Region extends  MenuService{
      public void traiter(Recensement recensement, Scanner scanner){
-            List<Region> populationRegion = new ArrayList<>();
-             for (Region region : recupereRegion(recensement)) {
-                populationRegion.add(region);
-             }
-             // Tri les régions par populations
-         Collections.sort(populationRegion, new ComparartorRegion()); 
+         List<Region> populationRegion = new ArrayList<>();
+         for (Region region : recupereRegion(recensement)) {
+             populationRegion.add(region);
+         }
+         // Tri les régions par populations
+         Collections.sort(populationRegion, new ComparartorRegion());
 
 
         // Récupère le top 10 des régions

@@ -28,7 +28,6 @@ public class Top10Departement extends  MenuService{
             if(! hasDepartement(ville.codeDepartement, departements)){
                 Departement departement = new Departement();
                 departement.code= ville.codeDepartement;
-
                 departement.population = recensement.populationDepartement(departement.code);
                 departements.add(departement);
 

@@ -8,7 +8,8 @@ public class Top10VilleParRegion {
         try {
             int region = Integer.parseInt(scanner.nextLine());
             System.out.println(recensement.populationVilleParRegion(region));
-        }catch (NumberFormatException e){
+        }
+        catch (NumberFormatException e){
             e.printStackTrace();
         }
 
