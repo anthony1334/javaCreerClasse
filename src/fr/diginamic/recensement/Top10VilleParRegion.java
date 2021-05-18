@@ -2,7 +2,8 @@ package fr.diginamic.recensement;
 
 import java.util.Scanner;
 
-public class Top10VilleParRegion {
+public class Top10VilleParRegion extends MenuService {
+    @Override
     public void traiter(Recensement recensement,Scanner scanner){
         System.out.println("veuillez saisir une region :");
         try {

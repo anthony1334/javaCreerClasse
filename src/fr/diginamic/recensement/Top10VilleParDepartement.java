@@ -9,10 +9,6 @@ public class Top10VilleParDepartement extends  MenuService{
         System.out.println("veuillez saisir un departement :");
         String departement = scanner.nextLine();
         System.out.println(recensement.populationVilleParDepartement(departement));
-
-
-
-
     }
 
 }
