@@ -1,6 +1,7 @@
 package fr.diginamic.recensement;
 
 import java.util.Comparator;
+import fr.diginamic.recensement.Departement;
 
 public class ComparartorDepartement implements Comparator<Departement> {
 
@@ -11,4 +12,6 @@ public class ComparartorDepartement implements Comparator<Departement> {
 
         return result;
     }
+
+
 }
